@@ -46,9 +46,11 @@ static const CGFloat CUTOFF = 0.5;
 {
     self.opaque = NO;
     self.contentMode = UIViewContentModeRedraw;
-    
+
     self.currentRadian = 0;
-    [self addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)]];
+
+    self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [self addGestureRecognizer:self.panGesture];
 }
 
 - (void) awakeFromNib

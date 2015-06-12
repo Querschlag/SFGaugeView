@@ -18,6 +18,7 @@
 
 @interface SFGaugeView : UIView
 
+@property (nonatomic) UIPanGestureRecognizer *panGesture;
 @property (nonatomic) NSUInteger maxlevel;
 @property (nonatomic) NSUInteger minlevel;
 @property (nonatomic) UIColor *needleColor;
